@@ -1,0 +1,24 @@
+runtime: php
+env: flex
+
+runtime_config: document_root: public
+
+skip_files: 
+    - .env
+
+automatic_scaling:
+    min_num_instances: 1
+    max_num_instances: 1
+
+resources:
+    cpu: 2
+    memory_gb: 4
+    disk_size_gb: 100
+
+env_variables:
+    APP_DEBUG: true
+    APP_ENV: production
+    APP_KEY: base64:sVBX97gNx0vLIE/SycaIGe7frGJorxVMjyQkwj3jh84=
+    APP_NAME: "Antique"
+
+    LOG_LEVEL: debug
